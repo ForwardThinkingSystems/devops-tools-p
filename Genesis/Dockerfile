@@ -1,6 +1,6 @@
 # Extended OpenClaw image with security tools, browser, and memory plugin.
 # Build: docker build -t openclaw-bot:latest .
-FROM openclaw/openclaw:latest
+FROM ghcr.io/openclaw/openclaw:latest
 
 # Switch to root for package installation
 USER root
