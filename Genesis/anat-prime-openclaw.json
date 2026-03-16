@@ -1,0 +1,50 @@
+{
+  "gateway": {
+    "mode": "local",
+    "port": "18789",
+    "auth": {
+      "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "${LLM_MODEL}"
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "dmPolicy": "allowlist",
+      "allowFrom": ["${TELEGRAM_ALLOWED_USER_ID}"]
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "provider": "brave",
+        "apiKey": "${BRAVE_API_KEY}"
+      }
+    }
+  },
+  "browser": {
+    "enabled": true
+  },
+  "mcpServers": {
+    "graph": {
+      "command": "npx",
+      "args": ["-y", "@merill/lokka"],
+      "env": {
+        "TENANT_ID": "${AZURE_TENANT_ID}",
+        "CLIENT_ID": "${AZURE_CLIENT_ID}",
+        "CLIENT_SECRET": "${AZURE_CLIENT_SECRET}"
+      }
+    }
+  },
+  "cron": {
+    "enabled": true,
+    "maxConcurrentRuns": 2
+  }
+}
