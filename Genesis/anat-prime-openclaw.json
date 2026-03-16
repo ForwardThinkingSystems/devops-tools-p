@@ -24,8 +24,10 @@
   "tools": {
     "web": {
       "search": {
-        "provider": "brave",
-        "apiKey": "${BRAVE_API_KEY}"
+        "provider": "perplexity",
+        "perplexity": {
+          "apiKey": "${PERPLEXITY_API_KEY}"
+        }
       }
     }
   },
