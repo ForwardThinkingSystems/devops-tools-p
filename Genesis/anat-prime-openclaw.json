@@ -24,7 +24,7 @@
   "tools": {
     "web": {
       "search": {
-        "provider": "perplexity",
+        "provider": "perplexity1",
         "perplexity": {
           "apiKey": "${PERPLEXITY_API_KEY}"
         }
