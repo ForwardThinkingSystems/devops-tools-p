@@ -32,10 +32,35 @@
     }
   },
   "browser": {
-    "enabled": true
+    "enabled": true,
+    "headless": true,
+    "noSandbox": true,
+    "executablePath": "/opt/pw-browsers/chromium-1208/chrome-linux/chrome"
   },
   "cron": {
     "enabled": true,
     "maxConcurrentRuns": 2
+  },
+  "plugins": {
+    "allow": [
+      "telegram"
+    ],
+    "slots": {},
+    "entries": {
+      "hindsight-openclaw": {
+        "enabled": false
+      },
+      "memory-core": {
+        "enabled": true
+      },
+      "memory-lancedb": {
+        "enabled": true,
+        "config": {
+          "embedding": {
+            "apiKey": "${OPENAI_EMBEDDING_KEY}"
+          }
+        }
+      }
+    }
   }
 }
