@@ -1,7 +1,7 @@
 {
   "gateway": {
     "mode": "local",
-    "port": "18789",
+    "port": 18789,
     "auth": {
       "token": "${OPENCLAW_GATEWAY_TOKEN}"
     }
@@ -31,17 +31,6 @@
   },
   "browser": {
     "enabled": true
-  },
-  "mcpServers": {
-    "graph": {
-      "command": "npx",
-      "args": ["-y", "@merill/lokka"],
-      "env": {
-        "TENANT_ID": "${AZURE_TENANT_ID}",
-        "CLIENT_ID": "${AZURE_CLIENT_ID}",
-        "CLIENT_SECRET": "${AZURE_CLIENT_SECRET}"
-      }
-    }
   },
   "cron": {
     "enabled": true,
